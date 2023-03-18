@@ -152,80 +152,91 @@
 		<footer class="bg-neutral-900 text-neutral-100 padding-block-700">
 			<div class="container">
 				<div class="even-columns">
-					<div>
-						<a class="logo" href="#"><img src="/images/logo.svg" alt="" /></a>
-						<ul role="list" aria-label="Social links">
+					<a class="logo" href="#">
+						<svg class="icon logo">
+							<use xlink:href="/images/new-svg.svg#logo"></use>
+						</svg>
+					</a>
+
+					<ul role="list" aria-label="Social links">
+						<li>
+							<a aria-label="facebook" href="#"
+								><svg class="icon">
+									<use xlink:href="/images/new-svg.svg#icon-facebook"></use>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a aria-label="youtube" href="#">
+								<svg class="icon">
+									<use xlink:href="/images/new-svg.svg#icon-youtube"></use>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a aria-label="twitter" href="#">
+								<svg class="icon">
+									<use xlink:href="/images/new-svg.svg#icon-twitter"></use>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a aria-label="pinterest" href="#">
+								<svg class="icon">
+									<use xlink:href="/images/new-svg.svg#icon-pinterest"></use>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a aria-label="instagram" href="#">
+								<svg class="icon">
+									<use xlink:href="/images/new-svg.svg#icon-instagram"></use>
+								</svg>
+							</a>
+						</li>
+					</ul>
+
+					<nav class="nav-footer">
+						<ul
+							aria-label="Footer"
+							role="list"
+							class="flow"
+							style="--flow-spacer: 1em"
+						>
 							<li>
-								<a aria-label="facebook" href="#"
-									><img src="/images/icon-facebook.svg" alt="" srcset=""
-								/></a>
+								<a href="#">Home</a>
 							</li>
 							<li>
-								<a aria-label="youtube" href="#"
-									><img src="/images/icon-youtube.svg" alt="" srcset=""
-								/></a>
+								<a href="#">Pricing</a>
 							</li>
 							<li>
-								<a aria-label="twitter" href="#"
-									><img src="/images/icon-twitter.svg" alt="" srcset=""
-								/></a>
+								<a href="#">Products</a>
 							</li>
 							<li>
-								<a aria-label="pinterest" href="#"
-									><img src="/images/icon-pinterest.svg" alt="" srcset=""
-								/></a>
+								<a href="#">About Us</a>
 							</li>
 							<li>
-								<a aria-label="instagram" href="#"
-									><img src="/images/icon-instagram.svg" alt="" srcset=""
-								/></a>
+								<a href="#">Careers</a>
+							</li>
+							<li>
+								<a href="#">Community</a>
+							</li>
+							<li>
+								<a href="#">Privacy Policy</a>
 							</li>
 						</ul>
-					</div>
-					<div>
-						<nav>
-							<ul
-								aria-label="Footer"
-								role="list"
-								class="nav-footer | flow"
-								style="--flow-spacer: 1em"
-							>
-								<li>
-									<a href="#">Home</a>
-								</li>
-								<li>
-									<a href="#">Pricing</a>
-								</li>
-								<li>
-									<a href="#">Products</a>
-								</li>
-								<li>
-									<a href="#">About Us</a>
-								</li>
-								<li>
-									<a href="#">Careers</a>
-								</li>
-								<li>
-									<a href="#">Community</a>
-								</li>
-								<li>
-									<a href="#">Privacy Policy</a>
-								</li>
-							</ul>
-						</nav>
-					</div>
-					<div>
-						<form action="">
-							<input
-								type="email"
-								name="email"
-								id="email"
-								placeholder="Updates in your inbox…"
-							/>
-							<button class="button">Go</button>
-						</form>
-						<p>Copyright 2020. All Rights Reserved</p>
-					</div>
+					</nav>
+
+					<form action="">
+						<input
+							type="email"
+							name="email"
+							id="email"
+							placeholder="Updates in your inbox…"
+						/>
+						<button class="button no-glow">Go</button>
+					</form>
+					<p class="copyright">Copyright 2020. All Rights Reserved</p>
 				</div>
 			</div>
 		</footer>
