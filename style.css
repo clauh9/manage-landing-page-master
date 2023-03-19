@@ -352,6 +352,29 @@ p[data-width="wide"] {
 	color: var(--clr-accent-100);
 }
 
+.hero::before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	inset: 0;
+	background-position: top -10rem right;
+	background-repeat: no-repeat;
+	background-image: url(/images/bg-tablet-pattern.svg);
+}
+
+.background-img {
+	position: relative;
+}
+.background-img::before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	inset: 0;
+	background-position: bottom left;
+	background-repeat: no-repeat;
+	background-image: url(/images/bg-tablet-pattern.svg);
+}
+
 /* !numbered list */
 .numbered-items {
 	counter-reset: count;
@@ -547,31 +570,13 @@ footer .copyright {
 			"logo"
 			"hero";
 	}
-	.hero::before {
-		content: "";
-		position: absolute;
-		z-index: -1;
-		inset: 0;
-		background-position: 5rem -15rem;
-		background-repeat: no-repeat;
-		background-image: url(/images/bg-tablet-pattern.svg);
-	}
+
 	.hero div:first-child {
 		grid-area: hero;
 	}
 	.hero div:last-child {
 		grid-area: logo;
 		justify-self: center;
-	}
-	.background-img::before {
-		/* outline: 3px solid lime;
-		content: "";
-		position: absolute;
-		z-index: -1;
-		inset: 0;
-		background-position: 0px 0px, right 3em bottom 2em;
-		background-repeat: no-repeat;
-		background-image: url(/images/bg-tablet-pattern.svg); */
 	}
 
 	/* !call to action */
