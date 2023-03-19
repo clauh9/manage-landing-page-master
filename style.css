@@ -561,6 +561,7 @@ footer .copyright {
 	}
 	.hero div:last-child {
 		grid-area: logo;
+		justify-self: center;
 	}
 	.background-img::before {
 		/* outline: 3px solid lime;
