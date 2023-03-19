@@ -1,5 +1,6 @@
 :root {
 	--clr-accent-400: hsl(12, 88%, 59%);
+	--clr-accent-200: hsl(12, 88%, 75%);
 	--clr-accent-100: hsl(13, 100%, 96%);
 
 	--clr-primary-400: hsl(228, 39%, 23%);
@@ -293,9 +294,11 @@ p[data-width="wide"] {
 .no-glow {
 	box-shadow: none;
 }
+
 .button:hover,
 .button:focus-visible {
-	opacity: 0.5;
+	/* opacity: 0.5; */
+	background-color: var(--clr-accent-200);
 }
 
 .button[data-type="inversed"] {
@@ -349,6 +352,32 @@ p[data-width="wide"] {
 	color: var(--clr-accent-100);
 }
 
+/* !numbered list */
+.numbered-items {
+	counter-reset: count;
+}
+.numbered-items li {
+	counter-increment: count;
+}
+.numbered-items .flow {
+	display: grid;
+	grid-template-columns: min-content 1fr;
+	align-items: center;
+	column-gap: var(--size-400);
+}
+.numbered-items p {
+	grid-column: 1/-1;
+}
+.numbered-items .flow::before {
+	content: counter(count, decimal-leading-zero);
+	border-radius: 100vmax;
+	padding: var(--size-200) var(--size-500);
+	font-weight: var(--font-weight-bold);
+	font-size: var(--font-size-btn);
+	color: var(--clr-neutral-100);
+	background-color: var(--clr-accent-400);
+}
+
 /* !call to action */
 .cta {
 	position: relative;
@@ -396,7 +425,6 @@ p[data-width="wide"] {
 }
 footer .even-columns {
 	display: grid;
-
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-areas:
 		"logo links input"
@@ -488,6 +516,61 @@ footer .copyright {
 		gap: var(--size-600);
 		font-weight: var(--font-weight-bold);
 		padding: var(--size-700);
+	}
+
+	/* !main */
+	.text-center {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	/* !numbered list */
+	.numbered-items {
+		display: grid;
+		justify-content: center;
+	}
+	.numbered-items h3 {
+		line-height: 1.2;
+		padding: var(--size-200) var(--size-600);
+		border-radius: 100vmax 0 0 100vmax;
+		margin-left: -2.3rem;
+		background-color: var(--clr-accent-100);
+		z-index: -1;
+		font-size: clamp(var(--size-100), 3vw, var(--size-600));
+	}
+
+	.hero {
+		display: grid;
+		grid-template-areas:
+			"logo"
+			"hero";
+	}
+	.hero::before {
+		content: "";
+		position: absolute;
+		z-index: -1;
+		inset: 0;
+		background-position: 5rem -15rem;
+		background-repeat: no-repeat;
+		background-image: url(/images/bg-tablet-pattern.svg);
+	}
+	.hero div:first-child {
+		grid-area: hero;
+	}
+	.hero div:last-child {
+		grid-area: logo;
+	}
+	.background-img::before {
+		/* outline: 3px solid lime;
+		content: "";
+		position: absolute;
+		z-index: -1;
+		inset: 0;
+		background-position: 0px 0px, right 3em bottom 2em;
+		background-repeat: no-repeat;
+		background-image: url(/images/bg-tablet-pattern.svg); */
 	}
 
 	/* !call to action */
