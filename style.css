@@ -597,6 +597,12 @@ footer .copyright {
 	.mobile-nav-toggle .icon-close {
 		display: none;
 	}
+	.mobile-nav-toggle .icon-close[data-visible] {
+		display: block;
+	}
+	.mobile-nav-toggle .icon-hamburger[data-visible] {
+		display: none;
+	}
 	.primary-nav {
 		display: none;
 		position: absolute;

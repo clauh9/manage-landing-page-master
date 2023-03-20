@@ -1,8 +1,13 @@
 const navToggle = document.querySelector(".mobile-nav-toggle");
 const primaryNav = document.querySelector("#primary-nav");
+const btn_hamburger = document.querySelector(".icon-hamburger");
+const btn_close = document.querySelector(".icon-close");
 
 navToggle.addEventListener("click", () => {
   navToggle.setAttribute("aria-expanded", !primaryNav.hasAttribute("data-visible"))
+
+  btn_hamburger.toggleAttribute("data-visible");
+  btn_close.toggleAttribute("data-visible");
   primaryNav.toggleAttribute("data-visible");
 })
 
